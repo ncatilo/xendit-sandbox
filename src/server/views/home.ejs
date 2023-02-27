@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/public/style.css" />
+</head>
+
+<body>
+    <p class="title">
+        <%= envName %> environment
+    </p>
+    <div class="pay-options">
+        <span>Pay by </span>
+        <button data-payment-type="card">Card</button>
+        <button data-payment-type="ewallet">E-wallet</button>
+    </div>
+    <section id="content"></section>
+    <section id="response-area"></section>
+    <!-- For the payment provider prompt -->
+    <div id="provider-ui-prompt-area" style="display: none;">
+        <iframe height="100%" width="100%" id="inline-frame" name="inline-frame"> </iframe>
+    </div>
+    <!-- -->
+    <script src="/lib/jquery/jquery.min.js"></script>
+    <script src="/lib/socket.io-client/socket.io.min.js"></script>
+    <script src="/public/io.js"></script>
+    <script src="/public/main.js"></script>
+</body>
+
+</html>

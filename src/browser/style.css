@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+    overflow: auto;
+    box-sizing: border-box;
+}
+
+*:not(pre) {
+    font-family: 'Roboto';
+}
+
+form {
+    margin-top: 5px;
+}
+
+form div {
+
+    padding-bottom: 5px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+
+}
+
+ul li {
+    margin-bottom: 5px;
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+}
+
+#content {
+    width: 30%;
+}
+
+#response-area {
+    width: 70%;
+}
+
+#response-area>div {
+    width: 100%;
+    margin-top: 10px;
+}
+
+#response-area .bar {
+    cursor: pointer;
+    background-color: #ddd;
+}
+
+#response-area span {
+    padding: 5px;
+    display: inline-block;
+    /* display: block; */
+}
+
+#response-area pre {
+    margin: 0;
+    background-color: #000;
+    color: #fff;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+.short-field {
+    width: 50px;
+}
+
+.overlay {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+#provider-ui-prompt-area {
+    display: none;
+    /* width: 550px;
+    height: 450px; */
+    /* line-height: 200px; */
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    /* top: 25%;
+    left: 40%; */
+    /* margin-top: -100px;
+    margin-left: -150px; */
+    background-color: #ffffff;
+    border-radius: 5px;
+    text-align: center;
+    z-index: 11;
+    /* 1px higher than the overlay layer */
+}
+
+.title {
+    font-size: 15pt;
+    font-weight: bold;
+    text-transform: capitalize;
+    margin: 7px 0;
+}
+
+#id-area {
+    overflow: auto;
+}
+
+#id-area ul li {
+    display: none;
+    width: 350px;
+    border: solid 1px #aaa;
+}
+
+section {
+    float: left;
+    padding-right: 10px;
+}
+
+.chevron {
+    font-weight: bold;
+    padding-left: 10px !important;
+}
+
+.chevron-down::after {
+    content: 'ᐯ';
+}
+
+.chevron-up::after {
+    content: 'ᐱ';
+}
+
+#multi-use-form #amount {
+    display: none;
+}
+
+@media screen and (max-width: 1160px) {
+
+    #content {
+        width: 100%;
+    }
+
+    #response-area {
+        width: 100%;
+    }
+}

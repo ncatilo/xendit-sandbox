@@ -1,0 +1,101 @@
+<form id="payment-form">
+    <div>
+        <label>Amount</label>
+        <input name="amount" type="text" value="777">
+    </div>
+    <div>
+        <label>Wallet</label>
+        <select name="channel_code">
+            <option value="GCASH">GCash</option>
+            <option value="PAYMAYA">Maya</option>
+            <option value="GRABPAY">GrabPay</option>
+            <option value="SHOPEEPAY">ShopeePay</option>
+        </select>
+    </div>
+    <div>
+        <label>Save wallet info for later</label>
+        <select id="type">
+            <option value="one-time-use">No</option>
+            <option value="multiple-use">Yes</option>
+        </select>
+    </div>
+    <div id="customer-info" style="display: none;">
+        <div>
+            <label>First names</label>
+            <input type="text" name="given_names" value="John">
+        </div>
+        <div>
+            <label>Surname</label>
+            <input type="text" name="surname" value="Doe">
+        </div>
+        <div>
+            <label>Email address</label>
+            <input type="text" name="email" value="john@xendit.co">
+        </div>
+        <div>
+            <label>Mobile number</label>
+            <input type="text" name="mobile_number" value="+628774494404">
+        </div>
+    </div>
+    <div>
+        <label></label>
+        <button class="submit">Pay</button>
+    </div>
+</form>
+<div id="id-area">
+    <ul>
+        <li>
+            <form>
+                <div>
+                    <label>Customer ID</label>
+                    <input type="text" name="customer_id">
+                </div>
+                <div>
+                    <label></label>
+                    <button>Query</button>
+                </div>
+            </form>
+        </li>
+        <li>
+            <form id="multi-use-form">
+                <div>
+                    <label>Payment Method ID</label>
+                    <input type="text" name="payment_method_id">
+                </div>
+                <div>
+                    <label></label>
+                    <button type="button" data-path="query/payment_method">Query</button>
+                </div>
+                <div id="amount">
+                    <div>
+                        <label>Amount</label>
+                        <input type="text" name="amount">
+                    </div>
+                    <div>
+                        <label></label>
+                        <button data-path="re-use-saved-payment-method" type="button">Pay</button>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li>
+            <form>
+                <div>
+                    <label>Payment Request ID</label>
+                    <input type="text" name="payment_request_id">
+                </div>
+                <div>
+                    <label>Reference ID</label>
+                    <input type="text" name="reference_id">
+                </div>
+                <div>
+                    <label></label>
+                    <button type='button' data-path="query/payment_request">Query</button>
+                    <button type='button' data-path="refund">Refund</button>
+                </div>
+            </form>
+        </li>
+    </ul>
+</div>
+<script src="/public/ewallet.js"></script>
+<script src="/public/post-payment-form.js"></script>

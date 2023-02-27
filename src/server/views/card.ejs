@@ -1,0 +1,127 @@
+<form id="payment-form">
+    <div>
+        <label>Amount</label>
+        <input name="amount" type="text" value="777">
+    </div>
+    <div>
+        <label>Card number</label>
+        <input type="text" name="card_number" value="4000000000001091">
+    </div>
+    <div>
+        <label>Card expiry</label>
+        <input type="text" name="expiry_month" class="short-field" value="10">
+        <input type="text" name="expiry_year" class="short-field" value="2024">
+    </div>
+    <div>
+        <label>CVV/CVN</label>
+        <input class="short-field" type="text" name="cvv" value="123">
+    </div>
+    <div>
+        <label>Name on card</label>
+        <input type="text" name="cardholder_name" value="John Doe">
+    </div>
+    <div>
+        <label>Email address</label>
+        <input type="text" name="email" value="john@xendit.co">
+    </div>
+    <div>
+        <label>Mobile number</label>
+        <input type="text" name="mobile_number" value="+6208123123123">
+    </div>
+    <div>
+        <label>Phone number</label>
+        <input type="text" name="phone_number" value="+6208123123123">
+    </div>
+    <div>
+        <label>Country</label>
+        <input type="text" name="country" value="ID">
+    </div>
+    <div>
+        <label>Street Line 1</label>
+        <input type="text" name="street_line1" value="Jl. Panglima Polim">
+    </div>
+    <div>
+        <label>Street Line 2</label>
+        <input type="text" name="street_line2" value="Kav. 78">
+    </div>
+    <div>
+        <label>City</label>
+        <input type="text" name="city" value="Jakarta Selatan">
+    </div>
+    <div>
+        <label>Province/State</label>
+        <input type="text" name="province_state" value="DKI Jakarta">
+    </div>
+    <div>
+        <label>Sub-account ID (if applicable)</label>
+        <input type="text" name="sub_merchant_id">
+    </div>
+    <div>
+        <label>Save card for later use</label>
+        <select name="reusability">
+            <option value="ONE_TIME_USE">No</option>
+            <option value="MULTIPLE_USE">Yes</option>
+        </select>
+    </div>
+    <div>
+        <label></label>
+        <button class="submit">Pay</button>
+    </div>
+</form>
+<div id="id-area">
+    <ul>
+        <li>
+            <form>
+                <div>
+                    <label>Customer ID</label>
+                    <input type="text" name="customer_id">
+                </div>
+                <div>
+                    <label></label>
+                    <button>Query</button>
+                </div>
+            </form>
+        </li>
+        <li>
+            <form id="multi-use-form">
+                <div>
+                    <label>Payment Method ID</label>
+                    <input type="text" name="payment_method_id">
+                </div>
+                <div>
+                    <label></label>
+                    <button type="button" data-path="query/payment_method">Query</button>
+                </div>
+                <div id="amount">
+                    <div>
+                        <label>Amount</label>
+                        <input type="text" name="amount">
+                    </div>
+                    <div>
+                        <label></label>
+                        <button data-path="re-use-saved-payment-method" type="button">Pay</button>
+                    </div>
+                </div>
+            </form>
+        </li>
+        <li>
+            <form>
+                <div>
+                    <label>Payment Request ID</label>
+                    <input type="text" name="payment_request_id">
+                </div>
+                <div>
+                    <label>Reference ID</label>
+                    <input type="text" name="reference_id">
+                </div>
+                <div>
+                    <label></label>
+                    <button type='button' data-path="query/payment_request">Query</button>
+                    <button type='button' data-path="refund">Refund</button>
+                </div>
+            </form>
+        </li>
+    </ul>
+</div>
+<script src="/public/card.js"></script>
+<script src="/public/post-payment-form.js"></script>
